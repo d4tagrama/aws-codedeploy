@@ -1,0 +1,18 @@
+version: 0.0
+os: linux
+files:
+  - source: applications/app.py
+    destination: /home/ubuntu
+  - source: requirements.txt
+    destination: /home/ubuntu
+hooks:
+  BeforeInstall:
+    - location: scripts/install_dependencies.sh
+      timeout: 180
+  AfterInstall:
+    - location: scripts/stop_application.sh
+      timeout: 180
+  ApplicationStart:
+    - location: scripts/start_application.sh
+      timeout: 3600
+
