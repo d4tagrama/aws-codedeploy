@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files:
   - source: application/app.py
-    destination: /home/ubuntu
+    destination: /home/ubuntu/app
   - source: requirements.txt
-    destination: /home/ubuntu
+    destination: /home/ubuntu/app
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
