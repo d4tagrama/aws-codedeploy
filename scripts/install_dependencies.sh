@@ -2,7 +2,7 @@
 set -e
 
 apt install -y python3-venv
-cd /home/ubuntu/
+cd /home/ubuntu/app
 
 if [ ! -d "venv" ]; then
     python3 -m venv venv
