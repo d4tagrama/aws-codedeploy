@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: applications/app.py
+  - source: application/app.py
     destination: /home/ubuntu
   - source: requirements.txt
     destination: /home/ubuntu
