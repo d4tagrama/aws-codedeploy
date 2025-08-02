@@ -1,3 +1,5 @@
 #/bin/bash
-cd /home/ubuntu
-./venv/bin/flask run --host=0.0.0.0
+cd /home/ubuntu/app
+source venv/bin/activate
+export FLASK_APP=application/app.py
+flask run
