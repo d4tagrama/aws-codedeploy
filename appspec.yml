@@ -1,9 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: application/app.py
-    destination: /home/ubuntu/app
-  - source: requirements.txt
+  - source: .
     destination: /home/ubuntu/app
 hooks:
   BeforeInstall:
