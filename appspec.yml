@@ -9,11 +9,10 @@ permissions:
     group: ubuntu
     mode: 755
 hooks:
-  Install:
+  AfterInstall:
     - location: scripts/install_dependencies.sh
       timeout: 180
       runas: ubuntu
-  AfterInstall:
     - location: scripts/stop_application.sh
       timeout: 180
       runas: ubuntu
