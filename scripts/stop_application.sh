@@ -1,6 +1,6 @@
-#/bin/bash
+
 #!/bin/bash
-isExistApp=`pgrep flask`
+isExistApp=`ps -ef | grep -i '[f]lask'`
 if [[ -n  $isExistApp ]]; then
     pkill flask        
 fi
