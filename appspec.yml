@@ -3,14 +3,21 @@ os: linux
 files:
   - source: .
     destination: /home/ubuntu/app
+permissions:
+  - object: /home/ubuntu/app
+    owner: ubuntu
+    group: ubuntu
+    mode: 755
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
       timeout: 180
+      runas: ubuntu
   AfterInstall:
     - location: scripts/stop_application.sh
       timeout: 180
+      runas: ubuntu
   ApplicationStart:
     - location: scripts/start_application.sh
-      timeout: 3600
-
+      timeout: 3600 
+      runas: ubuntu
