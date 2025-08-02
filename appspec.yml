@@ -9,7 +9,7 @@ permissions:
     group: ubuntu
     mode: 755
 hooks:
-  BeforeInstall:
+  Install:
     - location: scripts/install_dependencies.sh
       timeout: 180
       runas: ubuntu
